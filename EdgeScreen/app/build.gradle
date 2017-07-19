@@ -11,13 +11,11 @@ android {
     }
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
-
     defaultConfig {
         applicationId "com.example.edgescreen"
         minSdkVersion 19
         targetSdkVersion 23
     }
-
     buildTypes {
         release {
             minifyEnabled false
