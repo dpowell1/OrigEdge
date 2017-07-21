@@ -35,10 +35,12 @@ public class LongClickCocktailProvider extends SlookCocktailProvider {
         Log.d(TAG, "onReceive: " + action);
         switch(action) {
             case ACTION_REMOTE_LONG_CLICK:
-                performRemoteLongClick(context, intent);
+//                performRemoteLongClick(context, intent);
+                doUpdate(context);
                 break;
             case ACTION_REMOTE_CLICK:
-                performRemoteClick(context, intent);
+//                performRemoteClick(context, intent);
+                doUpdate(context);
                 break;
             case ACTION_PULL_TO_REFRESH:
                 performPullToRefresh(context);
@@ -46,6 +48,12 @@ public class LongClickCocktailProvider extends SlookCocktailProvider {
             default:
                 break;
         }
+    }
+
+    private void doUpdate(Context context) {
+        SlookCocktailManager mgr = SlookCocktailManager.getInstance(context);
+        int[] cocktailIds = mgr.getCocktailIds(new ComponentName(context, this.getClass()));
+        onUpdate(context, mgr, cocktailIds);
     }
 
     @Override
