@@ -83,7 +83,7 @@
                 <action android:name="com.example.cocktailslooksample.action.ACTION_REMOTE_LONGCLICK" />
                 <action android:name="com.example.cocktailslooksample.action.ACTION_REMOTE_CLICK"/>
                 <action android:name="com.example.cocktailslooksample.action.ACTION_PULL_TO_REFRESH"/>
-                <!--<action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>-->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
 
             <meta-data android:name="android.appwidget.provider"
